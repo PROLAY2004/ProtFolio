@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Portfolio - Prolay Halder</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="./Images/1691770534443.jpg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="grid-background min-h-screen max-w-4xl mx-auto">
+        <header class="max-w-6xl mx-auto px-4 py-8">
+            <nav class="bg-white rounded-full px-6 py-3 flex justify-between items-center shadow-md animate-from-bottom"
+                style="--delay: 0.1s">
+                <div class="font-bold text-xl">Prolay Halder</div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden flex items-center focus:outline-none" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex lg:space-x-8 md:space-x-5 items-center">
+                    <a href="#about" class="text-gray-400 hover:text-gray-600 flex items-center space-x-1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span>About</span>
+                    </a>
+                    <a href="#skill" class="text-gray-400 hover:text-gray-600 flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#project" class="text-gray-400 hover:text-gray-600 flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                        </svg>
+                        <span>Project</span>
+                    </a>
+
+                    <a href="#contact" class="text-gray-400 hover:text-gray-600 flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Mobile Navigation Menu (hidden by default) -->
+            <div class="md:hidden bg-white py-4 px-6 rounded-xl shadow-lg mt-2 hidden absolute right-0 z-10 animate-from-bottom w-full max-w-6xl"
+                id="mobile-menu">
+                <div class="flex flex-col space-y-4">
+                    <a href="#about" class="text-gray-400 hover:text-gray-600 flex items-center space-x-1">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                        <span>About</span>
+                    </a>
+                    <a href="#skill" class="text-gray-400 hover:text-gray-600 flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <span>Skills</span>
+                    </a>
+                    <a href="#project" class="text-gray-400 hover:text-gray-600 flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                        </svg>
+                        <span>Project</span>
+                    </a>
+
+                    <a href="#contact" class="text-gray-400 hover:text-gray-600 flex items-center space-x-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main class="max-w-6xl mx-auto px-4 mt-8">
+            <!-- Hero Section -->
+            <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-16">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-4 animate-from-bottom" style="--delay: 0.2s">
+                    </div>
+                    <h1 class="text-3xl  lg:text-4xl font-semibold mt-6 text-zinc-800 animate-from-bottom"
+                        style="--delay: 0.2s">
+                        Hello, I am Prolay Halder.<br>
+                        <span class="text-gray-500">B.Tech 6th Sem || CSE </span> <br>
+                        Software Engineer || Fullstack Web Developer || Machine Learning || Internet of things(IoT)
+                    </h1>
+
+                    <div class="flex space-x-4 items-center mt-8 animate-from-bottom" style="--delay: 0.2s">
+                        <a href="#"
+                            class="bg-zinc-900 text-white px-5 py-2 rounded-lg hover:bg-zinc-900 transition">Reach
+                            Out</a>
+                        <a href="./Pages/ViewResume.html"
+                            class="pccv border border-gray-300 text-gray-700 px-5 py-2 rounded-lg hover:bg-gray-50 transition">Check
+                            Resume</a>
+                        <a href="./Files/PROLAY HALDER_Internship.pdf" download
+                            class="mbcv border border-gray-300 text-gray-700 px-5 py-2 rounded-lg hover:bg-gray-50 transition">Check
+                            Resume</a>
+                    </div>
+
+                    <div class="flex space-x-6 mt-8 text-gray-400 animate-from-bottom font-semibold"
+                        style="--delay: 0.2s">
+                        <a href="https://www.linkedin.com/in/prolay-halder-526553253/" target="_blank"
+                            class="hover:text-gray-600">LinkedIn</a>
+                        <a href="https://github.com/PROLAY2004" target="_blank" class="hover:text-gray-600">Github</a>
+                        <a href="https://www.instagram.com/_Prolay_Halder_/#" target="_blank"
+                            class="hover:text-gray-600">Instagram</a>
+                        <a href="https://www.facebook.com/prolay.halder.961" class="hover:text-gray-600"
+                            target="_blank">Facebook</a>
+                    </div>
+                </div>
+                <div class="col-span-1 flex items-center justify-center">
+                    <div class="relative w-64 h-64 animate-from-bottom" style="--delay: 0.2s">
+                        <div class="absolute w-full h-full bg-gray-200 rounded-full transform rotate-45"></div>
+                        <div class="absolute w-full h-full bg-gray-200 rounded-full transform rotate-90"></div>
+                        <div class="absolute w-full h-full rounded-full transform rotate-135" style="
+                          background: url('./Images/1691770534443.jpg') no-repeat center center;
+                          background-size: cover;
+                        ">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- About Section -->
+            <section class="mt-32" id="about">
+                <div class="animate-from-bottom" style="--delay: 0.8s">
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">ABOUT ME</p>
+                    <h2 class="text-4xl font-semibold text-gray-700">Educations</h2>
+                </div>
+                <!-- Graduation -->
+                <div class="grid grid-cols-1 gap-8 mt-12 animate-from-bottom">
+                    <div class="bg-white overflow-hidden shadow-lg animate-from-bottom"
+                        style="--delay: 0.9s; border-radius: 8px">
+                        <div class="card">
+                            <h2 id="title" class="text-l font-bold mb-2">
+                                <span class="name">Graduation (B.Tech)</span>
+                                <span class="time">September, 2022 - Present</span>
+                            </h2>
+                            <p class="org text-sm uppercase tracking-wider">Guru Nanak Institute of Technology</p>
+                            <p class="description text-sm uppercase tracking-wider">Pursuing B.Tech in Computer Science
+                                and Engineering (3rd year) with an average SGPA of 8.79.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- class 12 -->
+                <div class="grid grid-cols-1 gap-8 mt-6 animate-from-bottom">
+                    <div class="bg-white overflow-hidden shadow-lg animate-from-bottom"
+                        style="--delay: 0.9s; border-radius: 8px">
+                        <div class="card">
+                            <h2 id="title" class="text-l font-bold mb-2">
+                                <span class="name">Higher Secondary (Class XII)</span>
+                                <span class="time">Augest, 2020 - June, 2022</span>
+                            </h2>
+                            <p class="org text-sm uppercase tracking-wider">Uttarpara Model High School</p>
+                            <p class="description text-sm uppercase tracking-wider">Scored an A+ with 82% in the Science
+                                stream (Physics, Chemistry, and Mathematics).</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- class 10 -->
+                <div class="grid grid-cols-1 gap-8 mt-6 animate-from-bottom">
+                    <div class="bg-white overflow-hidden shadow-lg animate-from-bottom"
+                        style="--delay: 0.9s; border-radius: 8px">
+                        <div class="card">
+                            <h2 id="title" class="text-l font-bold mb-2">
+                                <span class="name">Secondary (Class X)</span>
+                                <span class="time">January, 2019 - July, 2020</span>
+                            </h2>
+                            <p class="org text-sm uppercase tracking-wider">Uttarpara Model High School</p>
+                            <p class="description text-sm uppercase tracking-wider">Got A+ with aggregate percentage of
+                                85.28%</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animate-from-bottom mt-14" style="--delay: 0.8s">
+                    <h2 class="text-4xl font-semibold text-gray-700">Hobbies & Interests</h2>
+                </div>
+
+                <div class="gap-8 hi">
+                    <!-- Project 1 -->
+                    <div class="abt overflow-hidden animate-from-bottom" style="--delay: 0.9s">
+                        <div class="bg-white hobby shadow-lg rounded-xl text-sm uppercase tracking-wider">
+                            <h2 class="text-xl font-bold text-gray-700">Hobbies</h2>
+                            <p>Video Editing</p>
+                            <p>Cinematography</p>
+                            <p>Gaming</p>
+                        </div>
+                        <model-viewer src="./Model/cute_robot.glb" alt="A 3D model" camera-orbit="90deg 75deg auto"
+                            disable-pan interaction-prompt="none" interaction-policy="none" auto-rotate disable-zoom
+                            camera-controls class="pcmodel animate-from-bottom "></model-viewer>
+                        <div class="interest bg-white shadow-lg rounded-xl text-sm uppercase tracking-wider">
+                            <h2 class="text-xl font-bold text-gray-700">Interests</h2>
+                            <p>Java</p>
+                            <p>javaScript</p>
+                            <p>php</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <model-viewer src="./Model/cute_robot.glb" alt="A 3D model" camera-orbit="90deg 75deg auto" disable-pan
+                interaction-prompt="none" interaction-policy="none" auto-rotate disable-zoom camera-controls
+                class="mobilemodel animate-from-bottom "></model-viewer>
+
+            <!-- Skills -->
+            <section class="skill" id="skill">
+                <div class="animate-from-bottom" style="--delay: 0.8s">
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">MY SKILLS</p>
+                    <h2 class="text-4xl font-semibold text-gray-700">Technical Skills</h2>
+                </div>
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 text-xl  lg:text-xl font-semibold mt-6 text-zinc-800 animate-from-bottom">
+                    <div class="skl shadow-lg">&rarr; C Programing</div>
+                    <div class="skl shadow-lg">&rarr; Python</div>
+                    <div class="skl shadow-lg">&rarr; Django</div>
+                    <div class="skl shadow-lg">&rarr; HTML5 & CSS3</div>
+                    <div class="skl shadow-lg">&rarr; git and gitHub</div>
+                    <div class="skl shadow-lg">&rarr; SQL</div>
+                    <div class="skl shadow-lg">&rarr; MongoDB</div>
+                    <div class="skl shadow-lg">&rarr; DBMS</div>
+                    <div class="skl shadow-lg">&rarr; Prompt Engineering</div>
+                    <div class="skl shadow-lg">&rarr; Operating System</div>
+                    <div class="skl shadow-lg">&rarr; Internet of Things (IoT)</div>
+                    <div class="skl shadow-lg">&rarr; Machine Learning</div>
+                </div>
+            </section>
+
+
+            <!-- Projects Section -->
+            <section class="mt-16" id="project">
+                <div class="animate-from-bottom" style="--delay: 0.8s">
+                    <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">MY CRAFT</p>
+                    <h2 class="text-4xl font-semibold text-gray-700">Projects</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg animate-from-bottom"
+                        style="--delay: 0.9s">
+                        <div class="relative aspect-[16/9] bg-gray-100">
+                            <img src="./Images/Shareguy.jpg" alt="Form project"
+                                class="w-full h-full hover:scale-105 duration-150" />
+                            <div
+                                class="absolute top-4 left-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                                <span class="text-gray-700">Shareguy</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold">ShareGuy lets you share files securely via QR code, email,
+                                or unique code - no login needed. Just upload and share!</h3>
+                            <p class="text-gray-500 mt-2">January, 2025</p>
+                            <a href="https://github.com/PROLAY2004/ShareGuy" target="_blank"
+                                class="mt-3 inline-block text-indigo-600 hover:text-indigo-800">View</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg animate-from-bottom" style="--delay: 1s">
+                        <div class="relative aspect-[16/9] bg-gray-100 overflow-hidden">
+                            <img src="./Images/Safevault.jpg" alt="Automated experience"
+                                class="w-full h-full object-fit hover:scale-105 duration-150" />
+                            <div
+                                class="absolute top-4 left-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                                <span class="text-gray-700">SafeVault</span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Built SafeVault, a secure Django password manager with
+                                encryption, using MongoDB, SQL, HTML/CSS, and JavaScript.</h3>
+                            <p class="text-gray-500 mt-2">February, 2025</p>
+                            <a href="https://github.com/PROLAY2004/SafeVault" target="_blank"
+                                class="mt-3 inline-block text-indigo-600 hover:text-indigo-800 hover:underline">View
+                            </a>
+                        </div>
+                    </div>
+                    <!-- project 3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg animate-from-bottom" style="--delay: 1s">
+                        <div class="relative aspect-[16/9] bg-gray-100 overflow-hidden">
+                            <img src="./Images/Smart_Home_IR.jpg" alt="Automated experience"
+                                class="w-full h-full object-fit hover:scale-105 duration-150" />
+                            <div
+                                class="absolute top-4 left-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                                <span class="text-gray-700">IoT - Smart Home</span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">Developed an IoT smart home system using Arduino Uno and
+                                ATtiny85 to control electric appliances via IR remote.</h3>
+                            <p class="text-gray-500 mt-2">April, 2025</p>
+                            <a href="https://github.com/PROLAY2004/IoT-Smart_Home-IR_Remote_Controller" target="_blank"
+                                class="mt-3 inline-block text-indigo-600 hover:text-indigo-800 hover:underline">View
+                            </a>
+                        </div>
+                    </div>
+                    <!-- project 4 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-lg animate-from-bottom" style="--delay: 1s">
+                        <div class="relative aspect-[16/9] bg-gray-100 overflow-hidden">
+                            <img src="./Images/PROGRESS.png" alt="Automated experience"
+                                class="w-full h-full object-fit hover:scale-105 duration-150" />
+                            <div
+                                class="absolute top-4 left-4 bg-white/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium">
+                                <span class="text-gray-700">Others</span>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-xl font-semibold">The link contains several small projects (C, Python,
+                                Machine learning), with some currently in progress and others completed.</h3>
+                            <p class="text-gray-500 mt-2">In Progress</p>
+                            <a href="https://github.com/PROLAY2004?tab=repositories" target="_blank"
+                                class="mt-3 inline-block text-indigo-600 hover:text-indigo-800 hover:underline">View all
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Acheivement  -->
+            <section class="mt-16" id="project">
+                <div class="animate-from-bottom" style="--delay: 0.8s">
+                    <h2 class="text-4xl font-semibold text-gray-700">Acheivements</h2>
+                </div>
+
+                <div class="achivement_container animate-from-bottom">
+                    <div class="wrap">
+                        <img src="https://imagedelivery.net/qc7VvyphMGWFiPVvTbB-ww/swapps.com/2019/04/django-faster.jpg/w=1600,h=900"
+                            alt="Django_Training">
+                        <aside class="text-l font-semibold">Django Training at Ardent Infotech pvt. ltd.</aside>
+                    </div>
+                    <div class="wrap">
+                        <img src="./Images/organisor.jpg" alt="Organizer">
+                        <aside class="text-l font-semibold">Organizer in marketing team of Annual Collage Fest</aside>
+                    </div>
+                    <div class="wrap">
+                        <img src="./Images/Tech_fest.jpg" alt="Tech_fest">
+                        <aside class="text-l font-semibold">Event Head of web dev in Departmental Tech-Fest</aside>
+                    </div>
+                    <div class="wrap">
+                        <img src="./Images/Nptel_AI.png" alt="Nptel_AI">
+                        <aside class="text-l font-semibold">Passed NPTEL course of AI and Get certificate</aside>
+                    </div>
+                    <div class="wrap">
+                        <img src="./Images/quiz.jpg" alt="quiz">
+                        <aside class="text-l font-semibold">Participated in nation wide online QUIZ</aside>
+                    </div>
+                    <div class="wrap">
+                        <img src="https://playerzpot.com/blog/wp-content/uploads/2022/02/WhatsApp-Image-2022-02-01-at-5.09.07-PM.jpeg"
+                            alt="Sports">
+                        <aside class="text-l font-semibold">Participated in collage level sport games</aside>
+                    </div>
+                    <div class="wrap">
+                        <img src="./Images/Event.jpg" alt="Events">
+                        <aside class="text-l font-semibold">Participated in various events and workshop</aside>
+                    </div>
+                    <div class="wrap">
+                        <img src="./Images/volentier.jpg" alt="volentier">
+                        <aside class="text-l font-semibold">Worked as volentier in collage fest</aside>
+                    </div>
+                    <div class="wrap">
+                        <img src="./Images/course.png" alt="course">
+                        <aside class="text-l font-semibold">Completed courses in coursera and IBM skillbuild</aside>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Contact Section -->
+            <section class="mt-14 mb-20" id="contact">
+                <div class="containe">
+                    
+                    <div class="animate-from-bottom" style="--delay: 1.1s">
+                        <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">REACH OUT AND GET IN TOUCH</p>
+                        <h2 class="text-xl font-semibold text-gray-700">Contact me and let's create magic with<br>code.
+                            <br>prolayhalder2004@gmail.com</h2>
+                    </div>
+
+
+                    <div class="contain onmob animate-from-bottom" style="--delay: 1s" >
+                        <div class="contact_form text-sm tracking-wider">
+                            <form action="https://api.web3forms.com/submit" method="post">
+                                <input type="hidden" name="access_key" value="72765db8-7e8c-46f3-a6ae-6fe47b6a85e7">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+                                <label for="details">Details</label>
+                                <textarea id="details" name="details" rows="4" placeholder="Your Message..." required></textarea>
+                                <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                                <button type="submit" class="text-sm uppercase tracking-wider font-bold">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                    <div class="mt-8 animate-from-bottom xyz" style="--delay: 1.2s">
+                        <p class="text-sm uppercase tracking-wider text-gray-500 mb-2">OR FIND ME COOKING ON</p>
+                        <div class="flex space-x-6 mt-4 text-gray-700 xyz">
+                            <a target="_blank" href="https://www.linkedin.com/in/prolay-halder-526553253/" class="hover:text-gray-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://github.com/PROLAY2004" class="hover:text-gray-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://www.facebook.com/prolay.halder.961" class="hover:text-gray-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://www.instagram.com/_Prolay_Halder_/#" class="hover:text-gray-900">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contain onpc animate-from-bottom" style="--delay: 1s" >
+                    <div class="contact_form text-sm tracking-wider">
+                        <form action="https://api.web3forms.com/submit" method="post">
+                            <input type="hidden" name="access_key" value="72765db8-7e8c-46f3-a6ae-6fe47b6a85e7">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+        
+                            <label for="details">Details</label>
+                            <textarea id="details" name="details" rows="4" placeholder="Your Message..." required></textarea>
+        <!-- Custom Confirmation / Success Page -->
+    <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+                            <button type="submit" class="text-sm uppercase tracking-wider font-bold">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuButton.addEventListener("click", function () {
+            if (mobileMenu.classList.contains("hidden")) {
+                mobileMenu.classList.remove("hidden");
+                mobileMenu.classList.add("block");
+            } else {
+                mobileMenu.classList.add("hidden");
+                mobileMenu.classList.remove("block");
+            }
+        });
+
+        // Close the mobile menu when clicking outside
+        document.addEventListener("click", function (event) {
+            if (
+                !mobileMenu.contains(event.target) &&
+                !menuButton.contains(event.target)
+            ) {
+                mobileMenu.classList.add("hidden");
+                mobileMenu.classList.remove("block");
+            }
+        });
+    });
+
+    // Detect when elements come into view
+    document.addEventListener("DOMContentLoaded", function () {
+        // Add blur effect initially
+        const animatedElements = document.querySelectorAll(".animate-from-bottom");
+        animatedElements.forEach((el) => {
+            el.style.filter = "blur(4px)";
+        });
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+        // Function to handle scroll and trigger animations
+        function handleScroll() {
+            animatedElements.forEach((element) => {
+                if (isInViewport(element) && element.style.opacity === "0") {
+                    element.style.animation = "fadeInUp 0.8s forwards";
+                    element.style.animationDelay = element.style.getPropertyValue(
+                        "--delay"
+                    );
+                }
+            });
+        }
+        // Initial check for elements in viewport
+        handleScroll();
+        // Add scroll event listener
+        window.addEventListener("scroll", handleScroll);
+    });
+
+</script>
+
+</html>

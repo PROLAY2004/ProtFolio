@@ -1,0 +1,322 @@
+body,
+html {
+  font-family: "Inter", sans-serif;
+  background-color: #f5f5f5;
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.grid-background {
+  background-image: linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+    linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+  background-size: 100px 100px;
+}
+
+.animate-from-bottom {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.9s forwards;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+  from {
+    filter: blur(4px);
+  }
+}
+
+
+.mobilemodel{
+    display: none;
+}
+.pcmodel{
+ display: block;
+ width: 100%;
+ --delay: 0.8s;
+ padding: 1%;
+ height: 100%;
+ --delay: 0.8s;
+ margin: auto;
+ aspect-ratio: 1/1;
+}
+div.hobby,div.interest{
+    width: 50%;
+    text-align: left;
+    padding: 3%;
+    margin: auto 1%;
+    border: 1px solid #121212;
+}
+div.abt{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.skl{
+    background-color: #f5f5f5;
+    padding: 1%;
+    border-radius: 10px;
+    border: #121212 1px solid;
+}
+
+div.card{
+    width: 100%;
+    border: 1px solid #121212;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    padding: 2% 4%;
+}
+div.card h2#title{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width : 550px){
+    div.card h2#title{
+        flex-direction: column;
+        /* text-align: center; */
+        padding: 0 5%;
+    }
+    div.card{
+        padding: 5% 1%;
+    }
+
+    p.org, p.description{
+        /* text-align: center; */
+        padding: 0 5%;
+    }
+}
+
+@media(max-width : 768px){
+    .pcmodel{
+        display: none;
+    }
+    .mobilemodel{
+        display: block;
+        width: 100%;
+        --delay: 0.8s;
+        padding: 1%;
+        height: 100%;
+        --delay: 0.8s;
+        margin: 10% auto;
+        aspect-ratio: 1/1;
+    }
+    div.hi{
+        margin-top: 12%;
+    }
+}
+
+
+
+
+
+.achivement_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px; /* Space between items */
+    padding: 20px;
+    margin-top: 2%;
+    --delay: 1s;
+    background: transparent;
+}
+
+.wrap {
+    background-color: #eee; /* Slightly lighter background for cards */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align content */
+    text-align: center; /* Center align text */
+}
+
+.wrap:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.wrap img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    border-radius: 0; /* Ensure the image stays rectangular */
+    cursor: pointer;
+}
+.pccv{
+    display: block;
+}
+.mbcv{
+    display: none;
+}
+.wrap aside {
+    padding: 15px 10px;
+    color: #0f1111;
+    background-color: #eee; /* Dark gray for text background */
+    width: 100%; /* Full width of the card */
+    margin: 0; /* Remove any default margin */
+    cursor: pointer;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 768px) {
+    .pccv{
+        display: none;
+    }
+    .mbcv{
+        display: block;
+    }
+    .achivement_container {
+        display: flex; /* Switch to flexbox for horizontal scrolling */
+        flex-wrap: nowrap; /* Prevent wrapping of items */
+        overflow-x: auto; /* Allow horizontal scrolling */
+        overflow-y: hidden; /* Prevent vertical overflow */
+        scroll-snap-type: x mandatory; /* Enable smooth snapping */
+        gap: 10px; /* Space between items */
+        padding: 10px; /* Padding inside the container */
+        max-width: 95vw; /* Prevent the container from exceeding viewport width */
+    }
+
+    .wrap {
+        flex: 0 0 80%; /* Each card takes 80% of the viewport width */
+        scroll-snap-align: center; /* Snap to the center of each card */
+        transition: transform 0.3s ease-in-out; /* Smooth animation for hover */
+    }
+
+    .wrap:hover {
+        transform: scale(1.05); /* Enlarge the card on hover */
+        z-index: 1; /* Bring the hovered card to the front */
+    }
+
+    .wrap img {
+        width: 100%; /* Ensure images fill their container */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Hide scrollbars for a cleaner look */
+    .achivement_container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .achivement_container {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+}
+
+.onpc{
+    display: block;
+}
+
+#contact{
+    display: flex;
+    justify-content: space-evenly;
+}
+div.containe{
+    margin: auto auto;
+}
+div.contain,div.containe{
+    width: 100%;
+}
+
+
+
+.contact {
+    padding: 40px 20px;
+    color: #ffffff;
+}
+
+.contact_form {
+    width: 100%;
+    margin: 2% auto;
+    background-color: #eee;
+    padding: 20px;
+    border: 1px solid #121212;
+    border-radius: 8px;
+}
+
+form{
+    background-color: #eee;
+}
+.contact_form form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: #121212;
+    background-color: #eee;
+    text-align: left;
+}
+
+.contact_form form input,
+.contact_form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #121212;
+    font-size: 14px;
+    resize: vertical;
+}
+.onmob{
+    display: none;
+}
+  
+.contact_form form input::placeholder,
+.contact_form form textarea::placeholder {
+    color: #aaaaaa;
+}
+
+.contact_form form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00bcd4;
+    color: #121212;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact_form form button:hover {
+    background-color: #008c9e;
+}
+@media (max-width: 768px) {
+    .contact_form {
+        width: 95%; /* Increase the width for smaller screens */
+        padding: 15px; /* Adjust padding for better fit */
+    }
+    .onpc{
+        display: none;
+    }
+.onmob{
+    display: block;
+    margin: 10% auto;
+}
+    .contact_form form label {
+        font-size: 16px; /* Slightly smaller font size for labels */
+    }
+
+    .contact_form form input,
+    .contact_form form textarea {
+        font-size: 14px; /* Ensure text remains readable */
+    }
+
+    .contact_form form button {
+        font-size: 14px; /* Adjust button text size */
+        padding: 8px; /* Slightly reduce button padding */
+    }
+}
+
