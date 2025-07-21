@@ -152,6 +152,7 @@ div.card h2#title{
     display: block;
     border-radius: 0; /* Ensure the image stays rectangular */
     cursor: pointer;
+    aspect-ratio: 16/9;
 }
 .pccv{
     display: block;
